@@ -1,0 +1,26 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://scontent.fbjp1-1.fna.fbcdn.net/v/t1.0-9/104339931_1212852272388442_253423404435209499_n.jpg?_nc_cat=101&_nc_sid=09cbfe&_nc_eui2=AeHyqM1mNqnh98KbMp9pJa4HT6XxWZqkel5PpfFZmqR6XkOda8S6lU-l6fRSRv2RxgElSJpPBsbNuR-vxXhEDHZ9&_nc_ohc=xD-4PQRVOGMAX_xrS59&_nc_ht=scontent.fbjp1-1.fna&oh=0122248872b54c2dd7d72005b4701577&oe=5F3C8610",
+      "name": "Ricardo Sobral Alves da Cunha",
+      "email": "riki.sobral@gmail.com",
+      "birth": 866073600000,
+      "gender": "M",
+      "blood": "O1",
+      "weight": "85",
+      "height": "185"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 2,
+      "avatar_url": "https://scontent.fbjp1-1.fna.fbcdn.net/v/t1.0-9/104339931_1212852272388442_253423404435209499_n.jpg?_nc_cat=101&_nc_sid=09cbfe&_nc_eui2=AeHyqM1mNqnh98KbMp9pJa4HT6XxWZqkel5PpfFZmqR6XkOda8S6lU-l6fRSRv2RxgElSJpPBsbNuR-vxXhEDHZ9&_nc_ohc=xD-4PQRVOGMAX_xrS59&_nc_ht=scontent.fbjp1-1.fna&oh=0122248872b54c2dd7d72005b4701577&oe=5F3C8610",
+      "name": "Abobrinha Amarela e laranja",
+      "birth": 618278400000,
+      "gender": "F",
+      "services": "teste2,teste2",
+      "created_at": 1595603138650
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap");
+
+/* animações */
+@keyframes up{
+    from{opacity: 0;transform: translateY(15px);}
+    to{opacity: 1;}
+}
+
+:root{
+    --main-color:#7159c1;
+    --secundary-color:#f7df1e;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    background-color:var(--main-color);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+    background-color: white;
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.menu{
+    font-size: 22px;
+    line-height: 32px;
+}
+.menu a{
+    text-decoration: none;
+    color: #777;
+    position: relative;
+}
+ .menu a + a{
+     margin-left: 32px;
+ }
+
+.menu a.active{
+    font-weight: bold;
+    color:var(--main-color);
+}
+.menu a:hover{
+    color: var(--main-color);
+}
+.menu a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
+.menu a:hover::after{
+    transition: width 300ms ease-in-out ;
+    width: 100%;
+    
+}
+
+/* ===== card ===== */
+.card{
+    background-color: white;
+    width: 800px;
+    min-height: 400px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 1px 3px 6px -2px rgba(0, 0, 0, 0.8);
+    animation: up 400ms ease-out;
+}
+
+/* details */
+
+.details{
+    padding: 32px;
+
+}
+
+
+.details .item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child{
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1){
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2){
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.details .item div:nth-child(2) span{
+    padding: 8px 16px;
+    background-color:var(--secundary-color);
+    border-radius:16px;
+    color: #777;
+    margin-right:4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+/* forms */
+input, select{
+    width: 100%;
+    outline: none; 
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+    transform: translateY(2px);
+}
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"],a.button{
+    padding:8px 32px;
+    background-color: var(--secundary-color);
+    border-radius: 4px;
+    margin-top: 32px;
+    width: 100%;
+    font-size: 16px;
+}
+a.button{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration:none;
+    color: #555;
+    font-weight: bold;
+}
+
+#form-delete button[type="submit"]{
+    margin-top: 8px;
+    background-color:rgba(221, 25, 63, 0.8);
+}
+#form-delete button[type="submit"]:hover{
+    transition: all 400ms ease-in-out;
+    filter:brightness(150%) drop-shadow(0 0 10px  rgb(221, 25, 63))
+}
+
+/* INDEX INSTRUCTORS */
+table{
+    width: 100%;
+}
+.table-container{
+    display:block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.table-container table{
+    border-spacing: 0px;
+}
+
+.table-container table thead{
+    margin-bottom: 8px;
+}
+
+.table-container tbody tr td{
+    text-align: center;
+    
+}
+th{
+    text-transform: uppercase;
+    color: #777;
+    font-size: 14px;
+}
+td{
+    padding: 8px;
+    border-top: 1px solid #d9d9d9;
+    margin-top: 8px;
+}
+
+
+tbody tr:last-child td{
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.table-container table tbody tr td:nth-child(3) span{
+    transform: scale(0.9);
+    padding: 8px;
+    background-color:var(--secundary-color);
+    border-radius:16px;
+    color: #777;
+    margin-right:4px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.table-container table tbody tr td a,
+.table-container > a {
+    background-color: var(--secundary-color);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--main-color);
+    padding:6px 8px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+
+}
+
+.table-container > a{
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.table-container table tbody tr td a:hover,
+.table-container > a:hover{
+    transition: filter 150ms ease-out, color 150ms ease-in;
+    filter: drop-shadow(2px 2px 4px var(--main-color));
+    color: black;
+    
+}   

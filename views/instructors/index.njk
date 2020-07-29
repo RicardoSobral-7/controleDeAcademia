@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+    <a href="/instructors/create">Novo</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Avatar</th>
+                <th>Instrutor</th>
+                <th>Atendimento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for instructor in instructors %}
+            <tr>
+                <td style="background: url({{instructor.avatar_url}}) no-repeat center center / cover; width:40px; height:40px; border-radius:50%; padding:10px; border:1px solid white; box-shadow: 3px 1px 4px -2px black;"></td>
+                <td>{{instructor.name}}</td>
+                <td>
+                {% for service in instructor.services %}
+                    {% if loop.index0 < 3 %}
+                            <span>{{service}}</span>
+                    {% endif %}
+                {% endfor %}
+                </td>   
+                <td><a href="/instructors/{{instructor.id}}">Visitar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
