@@ -48,7 +48,7 @@
 </div>
 
 <div class="item">
-    <div>Tipo Sanguíneo</div>
+    Tipo Sanguíneo
         <select name="blood" >
             <option value="A1"
             {% if member.blood == "A1" %}selected{% endif %}
@@ -75,17 +75,16 @@
             {% if member.blood == "AB0" %}selected{% endif %}
             >AB-</option>
         </select>
-    <div> 
 </div>
 <div class="item">
-    <div>Peso (KG)</div>
+    <div>Peso (KG)
         <div>
             <input type="number" name="weight" value="{{member.weight}}">
         </div>
     </div>
 </div>
 <div class="item">
-    <div>Altura (CM)</div>
+    <div>Altura (CM)
         <div>
             <input type="number" name="height" value="{{member.weight}}">
         </div>
